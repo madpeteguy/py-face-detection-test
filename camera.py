@@ -28,11 +28,6 @@ while True:
             cv.rectangle(lastFrame, (x, y), (x + w, y + h), (255, 0, 0), 2)
             cv.putText(lastFrame, 'FACE', (x+5, y+20), cv.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1, cv.LINE_AA)
             fcx.verify_face((x, y, w, h))
-    # cv.line(gray, (0, 0), (vx, vy), (255, 0, 0), 5)
-    # cv.rectangle(gray, (vx, vy), (200, 200), (0, 255, 0), 3)
-    # cv.circle(gray, (vx, vy), 20, (0, 255, 0), 3)
-    # cv.putText(gray, 'PEPEK', (vx+20, vy + 20), cv.FONT_HERSHEY_SIMPLEX, 1, (2, 2, 2), 2, cv.LINE_AA)
-
     fps.update()
     rFrame = lastFrame
     if not lastFaces == fcx.get_faces_count():
